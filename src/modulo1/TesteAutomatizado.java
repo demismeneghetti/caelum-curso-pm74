@@ -14,16 +14,18 @@ public class TesteAutomatizado {
         // acessa o site do google
         driver.get("http://www.google.com.br/");
          
-        // digita no campo com nome "q" do google
+        // Insere o texto no campo "q" do Google!
         WebElement campoDeTexto = driver.findElement(By.name("q"));
         campoDeTexto.sendKeys("Caelum");
          
-        // submete o form
+        // submete o formulário!
         campoDeTexto.submit();
+        
+        // realiza o print do resultado!
 
         // fecha o navegador Firefox
-        driver.close();
-        driver.quit();
+        // driver.close();
+        // driver.quit();
     }
 }
 
