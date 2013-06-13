@@ -1,22 +1,21 @@
 package br.com.caelum.automatizando.testes.web;
 
-import java.io.File;
-
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TesteAutomatizadoLoginPainelComBr {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public static void main(String[] args) {
 
 		// Para executar via Windows
-		File fileDriver = new File(
-				"C:\\Users\\cad_dmeneghetti\\Documents\\GitHub\\caelum-curso-pm74\\drivers\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver",
-				fileDriver.getAbsolutePath());
+		// File fileDriver = new File(
+		// "C:\\Users\\cad_dmeneghetti\\Documents\\GitHub\\caelum-curso-pm74\\drivers\\chromedriver.exe");
+		// System.setProperty("webdriver.chrome.driver",
+		// fileDriver.getAbsolutePath());
 
 		// Para executar via Mac
 		// File fileDriver = new File(
@@ -25,7 +24,7 @@ public class TesteAutomatizadoLoginPainelComBr {
 		// fileDriver.getAbsolutePath());
 
 		// abre firefox
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
 
 		// acessa o site do google
 		driver.get("http://painel.uoldiveo.com.br/");
