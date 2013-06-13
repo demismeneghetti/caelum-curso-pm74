@@ -1,4 +1,4 @@
-package modulo1;
+package br.com.caelum.automatizando.testes.web;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
