@@ -2,18 +2,27 @@ package br.com.caelum.automatizando.testes.web;
 
 import java.io.File;
 
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TesteAutomatizado {
-
+	@Test
 	public static void main(String[] args) throws InterruptedException {
+
+		// Para executar via Windows
 		File fileDriver = new File(
-				"/Users/demismeneghetti/git/caelum-curso-pm74/drivers/chromedriver");
+				"C:\\Users\\cad_dmeneghetti\\Documents\\GitHub\\caelum-curso-pm74\\drivers\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver",
 				fileDriver.getAbsolutePath());
+
+		// Para executar via Mac
+		// File fileDriver = new File(
+		// "/Users/demismeneghetti/git/caelum-curso-pm74/drivers/chromedriver");
+		// System.setProperty("webdriver.chrome.driver",
+		// fileDriver.getAbsolutePath());
 
 		// abre firefox
 		WebDriver driver = new ChromeDriver();
@@ -29,8 +38,8 @@ public class TesteAutomatizado {
 		campoDeTexto.submit();
 
 		// Fecha o navegador.
-		//driver.wait(10);
-		//driver.close();
-		//driver.quit();
+		// driver.wait(10);
+		// driver.close();
+//		 driver.quit();
 	}
 }
