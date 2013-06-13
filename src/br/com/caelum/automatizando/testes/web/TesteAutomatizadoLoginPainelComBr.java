@@ -42,7 +42,7 @@ public class TesteAutomatizadoLoginPainelComBr {
 
 		// Fecha o navegador.
 		// driver.wait(10);
-		// driver.close();
+		driver.close();
 		// driver.quit();
 	}
 }
