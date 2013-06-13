@@ -1,0 +1,102 @@
+[0.000][INFO]:      ChromeDriver 26.0.1383.0 /Users/demismeneghetti/git/caelum-curso-pm74/drivers/chromedriver
+[0.603][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.switches": [  ],
+   "chromeOptions": {
+      "args": [  ],
+      "extensions": [  ]
+   },
+   "platform": "ANY",
+   "version": ""
+}
+
+[0.604][INFO]:      Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --disable-background-networking --disable-sync --disable-translate --disable-web-resources --safebrowsing-disable-auto-update --safebrowsing-disable-download-protection --disable-client-side-phishing-detection --disable-component-update --disable-default-apps --enable-logging --log-level=1 --use-mock-keychain --ignore-certificate-errors about:blank
+[1.140][INFO]:      Connected to Chrome successfully. Version: 27.0.1453.110
+[1.192][FINE]:      Command received (/session/91830055ff8eacbb0a7483385530f649)
+[1.192][FINE]:      Command finished (/session/91830055ff8eacbb0a7483385530f649) with response {
+   "sessionId": "91830055ff8eacbb0a7483385530f649",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "26.0.1383.0",
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "mac",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "27.0.1453.110",
+      "webStorageEnabled": true
+   }
+}
+
+[1.215][FINE]:      Command received (/session/91830055ff8eacbb0a7483385530f649/url) with params {
+   "url": "http://www.google.com.br/"
+}
+
+[1.215][FINER]:     Waiting for all views to stop loading...
+[1.215][FINER]:     Done waiting for all views to stop loading
+[1.814][FINER]:     Waiting for all views to stop loading...
+[1.815][FINER]:     Done waiting for all views to stop loading
+[1.815][FINE]:      Command finished (/session/91830055ff8eacbb0a7483385530f649/url) with response {
+   "sessionId": "91830055ff8eacbb0a7483385530f649",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[1.833][FINE]:      Command received (/session/91830055ff8eacbb0a7483385530f649/element) with params {
+   "using": "name",
+   "value": "q"
+}
+
+[1.833][FINER]:     Waiting for all views to stop loading...
+[1.834][FINER]:     Done waiting for all views to stop loading
+[2.061][FINER]:     Waiting for all views to stop loading...
+[2.061][FINER]:     Done waiting for all views to stop loading
+[2.061][FINE]:      Command finished (/session/91830055ff8eacbb0a7483385530f649/element) with response {
+   "sessionId": "91830055ff8eacbb0a7483385530f649",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1371087574903"
+   }
+}
+
+[2.070][FINE]:      Command received (/session/91830055ff8eacbb0a7483385530f649/element/:wdc:1371087574903/value) with params {
+   "id": ":wdc:1371087574903",
+   "value": [ "Demis Meneghetti" ]
+}
+
+[2.071][FINER]:     Waiting for all views to stop loading...
+[2.085][FINER]:     Done waiting for all views to stop loading
+[2.577][FINER]:     Waiting for all views to stop loading...
+[2.595][FINER]:     Done waiting for all views to stop loading
+[2.595][FINE]:      Command finished (/session/91830055ff8eacbb0a7483385530f649/element/:wdc:1371087574903/value) with response {
+   "sessionId": "91830055ff8eacbb0a7483385530f649",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[2.597][FINE]:      Command received (/session/91830055ff8eacbb0a7483385530f649/element/:wdc:1371087574903/submit) with params {
+   "id": ":wdc:1371087574903"
+}
+
+[2.597][FINER]:     Waiting for all views to stop loading...
+[2.597][FINER]:     Done waiting for all views to stop loading
+[2.625][FINER]:     Waiting for all views to stop loading...
+[2.625][FINER]:     Done waiting for all views to stop loading
+[2.625][FINE]:      Command finished (/session/91830055ff8eacbb0a7483385530f649/element/:wdc:1371087574903/submit) with response {
+   "sessionId": "91830055ff8eacbb0a7483385530f649",
+   "status": 0,
+   "value": null
+}
+
