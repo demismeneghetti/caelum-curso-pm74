@@ -30,7 +30,7 @@ public class TesteAutomatizado {
 
 		// digita no campo com nome "q" do google
 		WebElement campoDeTexto = driver.findElement(By.name("q"));
-		campoDeTexto.sendKeys("Demis Meneghetti");
+		campoDeTexto.sendKeys("Camila Carolina Cardoso");
 
 		// submete o form
 		campoDeTexto.submit();
