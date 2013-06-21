@@ -27,7 +27,7 @@ public class TesteAutomatizadoLoginPainelComBr {
 		WebDriver driver = new FirefoxDriver();
 
 		// acessa o site do google
-		driver.get("http://painel.uoldiveo.com.br/");
+		driver.get("https://painel.uoldiveo.com.br/");
 
 		// digita no username o usuário de acesso
 		WebElement campoUsername = driver.findElement(By.id("username"));
