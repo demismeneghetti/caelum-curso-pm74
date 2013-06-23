@@ -5,39 +5,43 @@ import static org.junit.Assert.assertTrue;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import br.com.caelum.pages.leilao.DetalhesDoLeilaoPage;
 import br.com.caelum.pages.leilao.LeiloesPage;
-import br.com.caelum.pages.leilao.NovoLeilaoPage;
 import br.com.caelum.pages.usuario.UsuariosPage;
 
-public class LeiloesSystemTest {
+public class LanceSystemTest {
 
-	private WebDriver driver;
+	private FirefoxDriver driver;
 	private LeiloesPage leiloes;
 
 	@Before
 	public void inicializa() {
 		driver = new FirefoxDriver();
 		leiloes = new LeiloesPage(driver);
-		driver.get("http://localhost:8080/apenas-teste/limpa");
 
+		// Cenario padrao
+		driver.get("http://localhost:8080/apenas-teste/limpa");
 
 		UsuariosPage usuarios = new UsuariosPage(driver);
 		usuarios.visita();
 		usuarios.novo().cadastra("Paulo Henrique", "paulo@henrique.com");
+		usuarios.novo().cadastra("José Eduardo", "jose@eduardo.com");
+
+		leiloes.visita();
+		leiloes.novo().preenche("Geladeira", 100, "Paulo Henrique", false);
 	}
 
 	@Test
-	public void deveCadastrarUmLeilao() {
+	public void deveFazerUmLance() {
+		DetalhesDoLeilaoPage lances = leiloes.detalhes(1);
 
-		leiloes.visita();
-		NovoLeilaoPage novoLeilao = leiloes.novo();
-		novoLeilao.preenche("Fogão", 123, "Paulo Henrique", true);
+		lances.lance("José Eduardo", 150);
 
-		assertTrue(leiloes.existe("Fogão", 123, "Paulo Henrique", true));
+		assertTrue(lances.existeLance("José Eduardo", 150));
 	}
+	
 
 	@After
 	public void encerra() {

@@ -18,6 +18,8 @@ public class UsuariosSystemTest {
 	public void inicializa() {
 		this.driver = new FirefoxDriver();
 		this.usuarios = new UsuariosPage(driver);
+		driver.get("http://localhost:8080/apenas-teste/limpa");
+
 	}
 
 	@Test
