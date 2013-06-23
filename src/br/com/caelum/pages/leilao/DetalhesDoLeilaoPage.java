@@ -1,6 +1,6 @@
 package br.com.caelum.pages.leilao;
 
-import org.openqa.selenium.By; 
+import org.openqa.selenium.By;  
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,9 +28,7 @@ public class DetalhesDoLeilaoPage {
 
 	public boolean existeLance(String usuario, double valor) {
 
-		Boolean temUsuario = new WebDriverWait(driver, 10)
-				.until(ExpectedConditions.textToBePresentInElement(
-						By.id("lanceDados"), usuario));
+		Boolean temUsuario = new WebDriverWait(driver, 2).until(ExpectedConditions.textToBePresentInElement(By.id("lancesDados"), usuario));
 
 		if (temUsuario)
 			return driver.getPageSource().contains(String.valueOf(valor));

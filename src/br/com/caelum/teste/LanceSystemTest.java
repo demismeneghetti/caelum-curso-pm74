@@ -1,6 +1,6 @@
 package br.com.caelum.teste;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertTrue; 
 
 import org.junit.After;
 import org.junit.Before;
@@ -39,7 +39,7 @@ public class LanceSystemTest {
 
 		lances.lance("José Eduardo", 150);
 
-		assertTrue(lances.existeLance("José Eduardo", 150));
+		assertTrue(lances.existeLance("José Eduardo", 150.0));
 	}
 	
 
