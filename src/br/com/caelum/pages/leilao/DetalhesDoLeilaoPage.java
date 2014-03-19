@@ -28,6 +28,7 @@ public class DetalhesDoLeilaoPage {
 
 	public boolean existeLance(String usuario, double valor) {
 
+		@SuppressWarnings("deprecation")
 		Boolean temUsuario = new WebDriverWait(driver, 2).until(ExpectedConditions.textToBePresentInElement(By.id("lancesDados"), usuario));
 
 		if (temUsuario)
