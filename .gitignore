@@ -5,3 +5,4 @@
 *.jar
 *.ear
 /bin
+/target/
