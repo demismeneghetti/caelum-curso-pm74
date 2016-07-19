@@ -27,7 +27,7 @@ public class LanceSystemTest {
 		UsuariosPage usuarios = new UsuariosPage(driver);
 		usuarios.visita();
 		usuarios.novo().cadastra("Paulo Henrique", "paulo@henrique.com");
-		usuarios.novo().cadastra("José Eduardo", "jose@eduardo.com");
+		usuarios.novo().cadastra("Jos√© Eduardo", "jose@eduardo.com");
 
 		leiloes.visita();
 		leiloes.novo().preenche("Geladeira", 100, "Paulo Henrique", false);
@@ -37,9 +37,9 @@ public class LanceSystemTest {
 	public void deveFazerUmLance() {
 		DetalhesDoLeilaoPage lances = leiloes.detalhes(1);
 
-		lances.lance("José Eduardo", 150);
+		lances.lance("Jos√© Eduardo", 150);
 
-		assertTrue(lances.existeLance("José Eduardo", 150.0));
+		assertTrue(lances.existeLance("Jos√© Eduardo", 150.0));
 	}
 	
 
