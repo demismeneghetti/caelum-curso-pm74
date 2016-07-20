@@ -19,14 +19,15 @@ public class LeiloesSystemTest {
 
 	@Before
 	public void inicializa() {
+		
 		driver = new FirefoxDriver();
 		leiloes = new LeiloesPage(driver);
 		driver.get("http://localhost:8080/apenas-teste/limpa");
 
-
 		UsuariosPage usuarios = new UsuariosPage(driver);
 		usuarios.visita();
 		usuarios.novo().cadastra("Paulo Henrique", "paulo@henrique.com");
+	
 	}
 
 	@Test
@@ -34,13 +35,17 @@ public class LeiloesSystemTest {
 
 		leiloes.visita();
 		NovoLeilaoPage novoLeilao = leiloes.novo();
-		novoLeilao.preenche("Fog‹o", 123, "Paulo Henrique", true);
+		novoLeilao.preenche("Fogï¿½o", 123, "Paulo Henrique", true);
 
-		assertTrue(leiloes.existe("Fog‹o", 123, "Paulo Henrique", true));
+		assertTrue(leiloes.existe("Fogï¿½o", 123, "Paulo Henrique", true));
+	
 	}
 
 	@After
 	public void encerra() {
+	
 		driver.close();
+	
 	}
+
 }

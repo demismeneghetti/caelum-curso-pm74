@@ -12,7 +12,9 @@ public class DetalhesDoLeilaoPage {
 	private WebDriver driver;
 
 	public DetalhesDoLeilaoPage(WebDriver driver) {
+
 		this.driver = driver;
+	
 	}
 
 	public void lance(String usuario, double valor) {
@@ -25,6 +27,7 @@ public class DetalhesDoLeilaoPage {
 		txtValor.sendKeys(String.valueOf(valor));
 
 		driver.findElement(By.id("btnDarLance")).click();
+	
 	}
 
 	public boolean existeLance(String usuario, double valor) {
@@ -36,5 +39,7 @@ public class DetalhesDoLeilaoPage {
 			return driver.getPageSource().contains(String.valueOf(valor));
 
 		return false;
+	
 	}
+
 }

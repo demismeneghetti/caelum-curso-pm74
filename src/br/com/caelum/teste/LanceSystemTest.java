@@ -1,6 +1,6 @@
 package br.com.caelum.teste;
 
-import static org.junit.Assert.assertTrue; 
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -18,6 +18,7 @@ public class LanceSystemTest {
 
 	@Before
 	public void inicializa() {
+
 		driver = new FirefoxDriver();
 		leiloes = new LeiloesPage(driver);
 
@@ -31,20 +32,25 @@ public class LanceSystemTest {
 
 		leiloes.visita();
 		leiloes.novo().preenche("Geladeira", 100, "Paulo Henrique", false);
+
 	}
 
 	@Test
 	public void deveFazerUmLance() {
+
 		DetalhesDoLeilaoPage lances = leiloes.detalhes(1);
 
 		lances.lance("José Eduardo", 150);
 
 		assertTrue(lances.existeLance("José Eduardo", 150.0));
+
 	}
-	
 
 	@After
 	public void encerra() {
+
 		driver.close();
+
 	}
+
 }

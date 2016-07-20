@@ -10,7 +10,9 @@ public class NovoLeilaoPage {
 	private final WebDriver driver;
 
 	public NovoLeilaoPage(WebDriver driver){
+		
 		this.driver = driver;
+
 	}
 	
 	public void preenche(String nome, double valor, String usuario, boolean usado){
@@ -33,4 +35,5 @@ public class NovoLeilaoPage {
 		txtNome.submit();
 		
 	}
+
 }

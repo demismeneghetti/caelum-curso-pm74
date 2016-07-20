@@ -9,10 +9,13 @@ public class NovoUsuarioPage {
 	private final WebDriver driver;
 
 	public NovoUsuarioPage(WebDriver driver) {
+		
 		this.driver = driver;
+	
 	}
 
 	public void cadastra(String nome, String email) {
+	
 		WebElement txtNome = driver.findElement(By.name("usuario.nome"));
 		WebElement txtEmail = driver.findElement(By.name("usuario.email"));
 
@@ -20,12 +23,16 @@ public class NovoUsuarioPage {
 		txtEmail.sendKeys(email);
 
 		txtNome.submit();
+	
 	}
 	
 //	public NovoUsuarioPage novo(){
+
 //		// CLica no link de novo usuario
-//		driver.findElement(By.linkText("Novo Usu‡rio")).click();
+//		driver.findElement(By.linkText("Novo Usuï¿½rio")).click();
 //		// Retorna a classe que representa a nova pagina
 //		return new NovoUsuarioPage(driver);
+
 //	}
+
 }

@@ -16,6 +16,7 @@ public class UsuariosSystemTest {
 	
 	@Before
 	public void inicializa() {
+
 		this.driver = new FirefoxDriver();
 		this.usuarios = new UsuariosPage(driver);
 		driver.get("http://localhost:8080/apenas-teste/limpa");
@@ -30,10 +31,14 @@ public class UsuariosSystemTest {
 		.cadastra("Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br");
 		
 		assertTrue(usuarios.exiteNaListagem("Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br"));
+	
 	}
 
 	@After
 	public void encerra() {
+	
 		driver.close();
+	
 	}
+
 }
